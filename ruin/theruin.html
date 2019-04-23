@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+    
+<!-- Mirrored from melonking.net/melon.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2019 04:09:17 GMT -->
+<head>
+	    <meta charset="UTF-8">
+        <title>WORLD WIDE RUIN</title>
+        <script>
+			
+			//Melo-tech Frame Link Management System 1.0
+			
+			//+++ Functions +++
+		    //Generic Parameter Function
+			function getParameterByName(name, url) 
+			{
+			    if (!url)
+			    {
+			      url = window.location.href;
+			    }
+			    name = name.replace(/[\[\]]/g, "\\$&");
+			    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"), results = regex.exec(url);
+			    if (!results) return null;
+			    if (!results[2]) return null;
+			    return decodeURIComponent(results[2].replace(/\+/g, " "));
+			}
+		    
+		    //Checks to see if a page parameter exists and sets the mainframe src to that page.
+		    function setMainFrame()
+		    {
+			    var mainframe = document.getElementById('mainframe');
+			    var page = getParameterByName( 'z' );
+			    
+			    if( page != null )
+			    {
+				    mainframe.src = page;
+			    }
+		    }
+		    
+		    //Updates the browser history with the current page, causing the URL bar to update.
+		    function updateHistory()
+		    {
+			    //For computers who did not set the frame before the first update.
+			    if( firstLoad == true )
+			    {
+				    firstLoad = false;
+				    return;
+			    }
+			    
+			    var page = window.frames[1].location.pathname;
+			    history.pushState('', '', '?z='+page );
+		    }
+		    
+		    //+++ Variables +++
+		    var firstLoad = true;
+
+		</script>
+    </head>
+
+    <frameset cols="150,*" onload="setMainFrame()">
+        <frame name="nav" src="nav.html" />
+        <frame id="mainframe" name="main" src="home.html" onload="updateHistory()" />
+    </frameset>
+
+<!-- Mirrored from melonking.net/melon.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2019 04:09:19 GMT -->
+</html>

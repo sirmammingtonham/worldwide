@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from melonking.net/hidden/2k.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2019 04:14:58 GMT -->
+<head>
+        <meta charset="UTF-8">
+        <title>
+            2K - MELON4EVER
+        </title>
+        
+        <link href="../styles/common.css" rel="stylesheet" type="text/css" media="all">
+        <style>
+            
+            body {
+                background-color: grey;
+                background-image: url("../images/stripe_bc814d31e537cfabb56002f986aec3c9.png");
+                
+                color: aqua;
+                
+                padding: 5px 0 0 30px;
+            }
+            
+            #stuff {
+	            width: 60%;
+            }
+            
+            h1 {
+	            text-align: center;
+	            margin: 0;
+            }
+            
+            h1 img {
+	            width: 200px;
+            }
+            
+        </style>
+    </head>
+    <body>
+	    
+	    <div id="stuff">
+	    	<h1><img src="Happy_New_Year__2000.png" /></h1>
+	    	
+	    	<p>Please keep this page open, it will refresh once a year for the next thousand years.</p>
+	    	
+	    	<p id="box" ></p>
+	    	
+	    	<footer id="footer">
+		    	&copy; It is so
+	    	</footer>
+	    </div>
+	    
+	    <script>
+		    
+		    //Make the years
+		    var box = document.getElementById("box");
+		    var string = "";
+		    var year = new Date().getFullYear();
+		    
+		    for ( var i = 2000 ; i < 3000 ; i++ )
+		    {
+			    if( i <= year)
+			    {
+				    string +=  "<font color=\"black\" >" + i + "</font>, ";
+			    }
+			    else
+			    {
+			    	string +=  i + ", ";
+			    }
+		    }
+		    
+		    string = string.substring(0, string.length - 2);
+		    
+		    box.innerHTML = string;
+		    
+		    //Update the footer after 2999
+		    var footer = document.getElementById("footer");
+		    if( year > 2999 )
+		    {
+			    footer.innerHTML = "<font color=\"black\" >&copy; It was so</font>";
+		    }
+		    
+		    //Auto Refresh once a year
+		    function timedRefresh(timeoutPeriod) 
+		    {
+				setTimeout("location.reload(true);", timeoutPeriod);
+			}
+
+			window.onload = timedRefresh(31536000000);
+		    
+	    </script>
+        
+        <audio autoplay loop>
+            <source src="../audio/Lobo_Loco_-_04_-_Mountain_Bells22.mp3" type="audio/mpeg">
+        </audio>
+        
+    </body>
+
+<!-- Mirrored from melonking.net/hidden/2k.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2019 04:15:00 GMT -->
+</html>
