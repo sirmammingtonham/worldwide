@@ -172,7 +172,12 @@
                             duration: 4000,
                             easing: 'swing',
                             step: function (curValue) {
-                                $this.text(Math.ceil(curValue));
+                                if ($this.text().includes(".")) {
+                                    $this.text(curValue.toFixed(1));
+                                }
+                                else {
+                                    $this.text(Math.ceil(curValue));
+                                }
                             }
                         });
                     });
