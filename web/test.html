@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+    <!-- minified snippet to load TalkJS without delaying your page -->
+        <div class="btn btn--stroke" id="holyshitsomuchjavascript">
+            <!-- onclick="holyshitsomuchjavascript()" -->
+            Experience Modern Web Design
+        </div>
+
+        <script>
+        (function(t,a,l,k,j,s){
+        s=a.createElement('script');s.async=1;s.src="https://cdn.talkjs.com/talk.js";a.head.appendChild(s)
+        ;k=t.Promise;t.Talk={v:1,ready:{then:function(f){if(k)return new k(function(r,e){l.push([f,r,e])});l
+        .push([f])},catch:function(){return k&&new k()},c:l}};})(window,document,[]);
+        </script>
+
+        <!-- TalkJS initialization code, which we'll customize in the next steps -->
+        <script>
+        Talk.ready.then(function() {
+            var me = new Talk.User({
+                id: "123456",
+                name: "Alice",
+                email: "alice@example.com",
+                photoUrl: "https://demo.talkjs.com/img/alice.jpg",
+                welcomeMessage: "Hey there! How are you? :-)"
+            });
+            window.talkSession = new Talk.Session({
+                appId: "t8q9EOz7",
+                me: me
+            });
+            var other = new Talk.User({
+                id: "654321",
+                name: "Ethan",
+                email: "ethan.joseph_19@sfuhs.org",
+                photoUrl: "https://cdn0.iconfinder.com/data/icons/seo-development-services-glyph/614/3243_-_Team_Support-512.png",
+                welcomeMessage: "Hi! How can I help?"
+            });
+            var conversation = talkSession.getOrCreateConversation(Talk.oneOnOneId(me, other))
+            conversation.setParticipant(me);
+            conversation.setParticipant(other);
+            var popup = talkSession.createPopup(conversation, { keepOpen: false });
+            popup.mount({ show: false });
+            // popup.show();
+
+            var button = document.getElementById("holyshitsomuchjavascript");
+            button.addEventListener("click", function(event) {
+                event.preventDefault();
+                popup.show();
+            });
+        });
+        </script>
+
+    </body>
+</html>

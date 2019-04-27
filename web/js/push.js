@@ -49,5 +49,19 @@ Push.create("Hello world!", {
         window.focus();
         this.close();
     }
-});; 
+});;
 },{"push.js":1}]},{},[2]);
+
+// var Push = require('push.js');
+// var button = document.getElementById("holyshitsomuchjavascript");
+// button.addEventListener("click", function() {
+//     Push.create("Do you like notifications?!", {
+//         body: "Well, too bad!",
+//         icon: '../images/notification.png',
+//         timeout: 10000,
+//         onClick: function () {
+//             window.focus();
+//             this.close();
+//         }
+//     });;
+// });
