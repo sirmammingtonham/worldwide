@@ -853,6 +853,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.5/push.js"></script>
     <script>
         button.addEventListener("click", function(event) {
+            Notification.requestPermission().then(function(result) {
+              console.log(result);
+            });
             Push.create("Do you like notifications?", {
                 body: "Well, too bad!",
                 icon: 'images/notification.png',
@@ -963,6 +966,7 @@
                         modalAdBlock.open();
                     }
                     else {
+                        var a = true; //for some reason if i dont include this the alert disappears in a second
                         alert("Whoa, it\'s 2019 and you don\'t use an adblock? Brave. Well, you\'re about to experience what happens if you did use an adblocker lol");
                         modalAdBlock.open();
                     }
