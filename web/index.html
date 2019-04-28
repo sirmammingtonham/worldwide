@@ -21,77 +21,6 @@
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- cookies!
-    ================================================== -->
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
-    <script>
-        var button = document.getElementById("holyshitsomuchjavascript");
-        button.addEventListener("click", function() {
-        window.cookieconsent.initialise({
-            "palette": {
-                "popup": {
-                    "background": "#efefef",
-                    "text": "#404040"
-                },
-                "button": {
-                  "background": "#8ec760",
-                  "text": "#ffffff"
-                }
-            },
-            "content": {
-                "message": "This website uses cookies to ensure you get the best experience."
-            },
-            "theme": "classic"
-        })});
-    </script>
-    <!-- chat lmao
-    ================================================== -->
-    <script>
-        (function(t,a,l,k,j,s){
-        s=a.createElement('script');s.async=1;s.src="https://cdn.talkjs.com/talk.js";a.head.appendChild(s)
-        ;k=t.Promise;t.Talk={v:1,ready:{then:function(f){if(k)return new k(function(r,e){l.push([f,r,e])});l
-        .push([f])},catch:function(){return k&&new k()},c:l}};})(window,document,[]);
-    </script>
-
-    <!-- TalkJS initialization code, which we'll customize in the next steps -->
-    <script>
-        Talk.ready.then(function() {
-            var me = new Talk.User({
-                id: "0",
-                name: "User",
-                email: "user@example.com",
-                photoUrl: "https://www.askideas.com/media/13/Indian-Fatty-Boy-With-Funny-Face-Photoshopped.jpg",
-                welcomeMessage: "Hey there! How are you? :-)"
-            });
-            window.talkSession = new Talk.Session({
-                appId: "t8q9EOz7",
-                me: me
-            });
-            var other = new Talk.User({
-                id: "654321",
-                name: "Ethan",
-                email: "ethan.joseph_19@sfuhs.org",
-                photoUrl: "https://cdn0.iconfinder.com/data/icons/seo-development-services-glyph/614/3243_-_Team_Support-512.png",
-                welcomeMessage: "Hi, welcome to the World Wide Web! How can I help you?"
-            });
-            var conversation = talkSession.getOrCreateConversation(Talk.oneOnOneId(me, other))
-            conversation.setParticipant(me);
-            conversation.setParticipant(other);
-            var popup = talkSession.createPopup(conversation, { 
-                messageSuggestion: "Yo, this is pretty annoying and not very useful?", 
-                keepOpen: false
-            });
-            popup.mount({ show: false });
-
-            var button = document.getElementById("holyshitsomuchjavascript");
-            button.addEventListener("click", function(event) {
-                event.preventDefault();
-                popup.show();
-            });
-        });
-    </script>
-
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="css/base.css">
@@ -114,7 +43,7 @@
 </head>
 
 <body id="top">
-
+<div class="tingle-content-wrapper">
     <!-- header
     ================================================== -->
     <header class="s-header">
@@ -388,10 +317,9 @@
                     <h3 class="subhead">Elements of Modern Web Design</h3>
                     <h1 class="display-2 display-2--light">How do modern websites compare to the old?</h1>
                     <div class="btn btn--stroke" id="holyshitsomuchjavascript">
-                        <!-- onclick="holyshitsomuchjavascript()" -->
                         Experience Modern Web Design
                     </div>
-                    <h3 class="subhead"><a href="https://i.imgur.com/EoNd3ev.gifv">This button is gonna spam you with the annoying requests that so many websites have nowadays, like this linked animation</a></h3>
+                    <h3 class="subhead"><a href="https://i.imgur.com/EoNd3ev.gifv" target="_blank">This button is gonna spam you with the annoying requests that so many websites have nowadays, like this linked animation</a></h3>
                 </div>
             </div> <!-- end section-header -->
 
@@ -822,7 +750,7 @@
             <div class="col-twelve">
                 <div class="copyright">
                     <span>© Sir Mammingtonham (hopefully)</span> 
-                    <span>Site Template by <a href="../../../www.colorlib.com/index.html">Colorlib</a></span>   
+                    <span>Site Template by <a href="https://www.colorlib.com">Colorlib</a></span>   
                 </div>
 
                 <div class="go-top">
@@ -873,7 +801,7 @@
         </div>
 
     </div> <!-- end photoSwipe background -->
-
+</div>
 
     <!-- preloader
     ================================================== -->
@@ -889,16 +817,188 @@
         </div>
     </div>
 
-
     <!-- Java Script
     ================================================== -->
     <script data-cfasync="false" src="js/email-decode.min.js"></script>
     <script src="js/jquery-3.2.1.min.js" type="91707114f47386b64d0ec3ea-text/javascript"></script>
     <script src="js/plugins.js" type="91707114f47386b64d0ec3ea-text/javascript"></script>
     <script src="js/main.js" type="91707114f47386b64d0ec3ea-text/javascript"></script>
-    <script src="js/push.js" type="text/javascript"></script>
+    <!-- <script src="js/push.js" type="text/javascript"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.5/push.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js"></script> -->
 
-<script src="js/rocket-loader.min.js" data-cf-settings="91707114f47386b64d0ec3ea-|49" defer=""></script></body>
+
+    <!-- cookies!
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+        var button = document.getElementById("holyshitsomuchjavascript");
+        button.addEventListener("click", function(event) {
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#efefef",
+                    "text": "#404040"
+                },
+                "button": {
+                  "background": "#8ec760",
+                  "text": "#ffffff"
+                }
+            },
+            "content": {
+                "message": "This website uses cookies to ensure you get the best experience."
+            },
+            "theme": "classic"
+        })});
+    </script>
+
+    <!-- push notifications... -->
+    <script>
+        button.addEventListener("click", function(event) {
+            Push.Permission.request(function(){}, function(){});
+            Push.create("Do you like notifications?", {
+                body: "Well, too bad!",
+                icon: '../images/notification.png',
+                timeout: 4000,
+                onClick: function () {
+                    window.focus();
+                    this.close();
+                }
+            })
+        });
+    </script>
+
+    <!-- fuck ad block -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.14.0/tingle.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.14.0/tingle.js"></script>
+    <script>
+        var ads = false;
+        var modalAdBlock;
+        function detected() {
+            ads = true;
+            modalAdBlock = new tingle.modal({
+                closeMethods: [],
+                footer: true,
+                stickyFooter: true,
+                // cssClass: ['main']
+            });
+            // button.addEventListener('click', function(){
+            //     var bruh = document.getElementById("__talkjs_launcher");
+            //     bruh.addEventListener('click', function() {
+            //         modalAdBlock.open();
+            //     });
+            // });
+            modalAdBlock.setContent("<h1 style=\"text-align:center;\">AdBlock Detected!<br>Please consider disabling adblock or whitelisting this site.</h1><h3>We depend on ad revenue to...<br>blah blah blah</h3>");
+
+            modalAdBlock.addFooterBtn('Yes, I will turn off adblock', 'btn btn--stroke', function(){
+                alert("Thanks!");
+                modalAdBlock.close();
+            });
+
+            modalAdBlock.addFooterBtn('Bruh i\'ll just leave the site lol', 'btn btn--stroke', function(){
+                alert("Right answer, ads are the worst right? I\'m just out here tryna consume some digital content without all these annoying mf ads.");
+                modalAdBlock.close();
+            });
+        }
+        function youGood() {
+            console.log("its 2019 and this mans doesnt use adblock...")
+        }
+
+        // We look at whether FuckAdBlock already exists.
+        if(typeof fuckAdBlock !== 'undefined' || typeof FuckAdBlock !== 'undefined') {
+            // If this is the case, it means that something tries to usurp are identity
+            // So, considering that it is a detection
+            detected();
+        } else {
+            // Otherwise, you import the script FuckAdBlock
+            var importFAB = document.createElement('script');
+            importFAB.onload = function() {
+                // If all goes well, we configure FuckAdBlock
+                fuckAdBlock.onDetected(detected)
+                fuckAdBlock.onNotDetected(youGood);
+            };
+            importFAB.onerror = function() {
+                // If the script does not load (blocked, integrity error, ...)
+                // Then a detection is triggered
+                detected(); 
+            };
+            importFAB.integrity = 'sha256-xjwKUY/NgkPjZZBOtOxRYtK20GaqTwUCf7WYCJ1z69w=';
+            importFAB.crossOrigin = 'anonymous';
+            importFAB.src = 'https://cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js';
+            document.head.appendChild(importFAB);
+        }
+    </script>
+
+    <!-- chat lmao
+    ================================================== -->
+    <script>
+        (function(t,a,l,k,j,s){
+        s=a.createElement('script');s.async=1;s.src="https://cdn.talkjs.com/talk.js";a.head.appendChild(s)
+        ;k=t.Promise;t.Talk={v:1,ready:{then:function(f){if(k)return new k(function(r,e){l.push([f,r,e])});l
+        .push([f])},catch:function(){return k&&new k()},c:l}};})(window,document,[]);
+    </script>
+
+    <!-- TalkJS-->
+    <script>
+        function letsTalk() {
+            Talk.ready.then(function() {
+                var me = new Talk.User({
+                    id: "0",
+                    name: "User",
+                    email: "user@example.com",
+                    photoUrl: "https://www.askideas.com/media/13/Indian-Fatty-Boy-With-Funny-Face-Photoshopped.jpg",
+                    welcomeMessage: "Hey there! How are you? :-)"
+                });
+                window.talkSession = new Talk.Session({
+                    appId: "t8q9EOz7",
+                    me: me
+                });
+                var other = new Talk.User({
+                    id: "654321",
+                    name: "Support Team: Ethan",
+                    email: "ethan.joseph_19@sfuhs.org",
+                    photoUrl: "https://cdn0.iconfinder.com/data/icons/seo-development-services-glyph/614/3243_-_Team_Support-512.png",
+                    welcomeMessage: "Hi, welcome to the World Wide Web! How can I help you?"
+                });
+                var conversation = talkSession.getOrCreateConversation(Talk.oneOnOneId(me, other))
+                conversation.setParticipant(me);
+                conversation.setParticipant(other);
+                var popup = talkSession.createPopup(conversation, { 
+                    messageSuggestion: "Yo, this feature is pretty annoying and not very useful?", 
+                    keepOpen: false
+                });
+                popup.mount({ show: false });
+                popup.show();
+                var bruh = document.getElementById("__talkjs_launcher");
+                bruh.addEventListener('click', function() {
+                    if (ads) {
+                        modalAdBlock.open();
+                    }
+                });
+                // button.addEventListener("click", function(event) {
+                //     event.preventDefault();
+                //     popup.show();
+                // });
+            });
+        }
+    </script>
+
+    <!-- newsletter -->
+    <script type="text/javascript">
+        var modalNews = new tingle.modal({
+            closeMethods: ['overlay', 'button', 'escape'],
+            footer: false,
+            onClose: letsTalk,
+            // cssClass: ['main']
+        });
+        button.addEventListener('click', function(){
+            modalNews.open();
+        });
+        modalNews.setContent("<h1 style=\"display:inline-block;\">Stay Notified!&nbsp&nbsp</h1><img src=\"images/message.png\" width=\"6%\" style=\"vertical-align:middle;\"/><h3>Subscribe to our newsletter and be annoyed by constant email spam!</h3>" + document.querySelector('.group').innerHTML);
+    </script>
+<script src="js/rocket-loader.min.js" data-cf-settings="91707114f47386b64d0ec3ea-|49" defer=""></script>
+</body>
 
 
 <!-- Mirrored from colorlib.com/etc/glint/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2019 03:26:48 GMT -->

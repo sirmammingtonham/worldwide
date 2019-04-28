@@ -4,16 +4,74 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.14.0/tingle.min.css">
+    <style type="text/css">
+    </style>
     </head>
 
     <body>
+        <div class="tingle-demo tingle-demo-tiny">
+            <h1>A small content</h1>
+            <p>Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+        </div>
     <!-- minified snippet to load TalkJS without delaying your page -->
         <div class="btn btn--stroke" id="holyshitsomuchjavascript">
             <!-- onclick="holyshitsomuchjavascript()" -->
             Experience Modern Web Design
         </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.14.0/tingle.js"></script>
+        <script type="text/javascript">
+        var modalTinyNoFooter = new tingle.modal({
+        onClose: function() {
+            console.log('close');
+        },
+        onOpen: function() {
+            console.log('open');
+        },
+        beforeOpen: function() {
+            console.log('before open');
+        },
+        beforeClose: function() {
+            console.log('before close');
+            return true;
+        },
+        cssClass: ['class1', 'class2']
+    });
+    var btn = document.querySelector('.btn');
+    btn.addEventListener('click', function(){
+        modalTinyNoFooter.open();
+    });
+    modalTinyNoFooter.setContent(document.querySelector('.tingle-demo-tiny').innerHTML);
+    </script>
+<!--         <script type="text/javascript">
+            /**
+            *   Force close button
+            */
 
-        <script>
+            var modalButtonOnly = new tingle.modal({
+                closeMethods: [],
+                footer: true,
+                stickyFooter: true,
+                cssClass: ['main']
+            });
+            var btn = document.getElementById("holyshitsomuchjavascript");
+            btn.addEventListener('click', function(){
+                var bruh = document.getElementById("__talkjs_launcher");
+                bruh.addEventListener('click', function() {
+                    modalButtonOnly.open();
+                });
+            });
+            modalButtonOnly.setContent("<h1>Why</h1><p>Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>");
+
+            modalButtonOnly.addFooterBtn('I agree', 'tingle-btn tingle-btn--primary tingle-btn--pull-right', function(){
+                modalButtonOnly.close();
+            });
+
+            modalButtonOnly.addFooterBtn('Cancel', 'tingle-btn tingle-btn--default tingle-btn--pull-right', function(){
+                modalButtonOnly.close();
+            });
+        </script> -->
+                <script>
         (function(t,a,l,k,j,s){
         s=a.createElement('script');s.async=1;s.src="https://cdn.talkjs.com/talk.js";a.head.appendChild(s)
         ;k=t.Promise;t.Talk={v:1,ready:{then:function(f){if(k)return new k(function(r,e){l.push([f,r,e])});l
@@ -55,6 +113,47 @@
             });
         });
         </script>
+<!--         <script type="text/javascript">
+            // Function called if AdBlock is not detected
+function adBlockNotDetected() {
+    var button = document.getElementById("holyshitsomuchjavascript");
+
+    button.addEventListener("click", function(event) {
+        alert('AdBlock is not enabled');
+    });
+}
+// Function called if AdBlock is detected
+function adBlockDetected() {
+    var button = document.getElementById("holyshitsomuchjavascript");
+    button.addEventListener("click", function(event) {
+        alert('AdBlock is enabled');
+    });
+}
+
+// We look at whether FuckAdBlock already exists.
+if(typeof fuckAdBlock !== 'undefined' || typeof FuckAdBlock !== 'undefined') {
+    // If this is the case, it means that something tries to usurp are identity
+    // So, considering that it is a detection
+    adBlockDetected();
+} else {
+    // Otherwise, you import the script FuckAdBlock
+    var importFAB = document.createElement('script');
+    importFAB.onload = function() {
+        // If all goes well, we configure FuckAdBlock
+        fuckAdBlock.onDetected(adBlockDetected)
+        fuckAdBlock.onNotDetected(adBlockNotDetected);
+    };
+    importFAB.onerror = function() {
+        // If the script does not load (blocked, integrity error, ...)
+        // Then a detection is triggered
+        adBlockDetected(); 
+    };
+    importFAB.integrity = 'sha256-xjwKUY/NgkPjZZBOtOxRYtK20GaqTwUCf7WYCJ1z69w=';
+    importFAB.crossOrigin = 'anonymous';
+    importFAB.src = 'https://cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js';
+    document.head.appendChild(importFAB);
+}
+        </script> -->
 
     </body>
 </html>

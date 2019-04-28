@@ -40,16 +40,19 @@
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],2:[function(require,module,exports){
-var Push = require('push.js');
-Push.create("Hello world!", {
-    body: "How's it hangin'?",
-    // icon: '/icon.png',
-    timeout: 4000,
-    onClick: function () {
-        window.focus();
-        this.close();
-    }
-});;
+        var Push = require('push.js');
+        var button = document.getElementById("holyshitsomuchjavascript");
+        button.addEventListener("click", function(event) {
+            Push.create("Do you like notifications?", {
+                body: "Well, too bad!",
+                icon: '../images/notification.png',
+                timeout: 4000,
+                onClick: function () {
+                    window.focus();
+                    this.close();
+                }
+            })
+        });
 },{"push.js":1}]},{},[2]);
 
 // var Push = require('push.js');
