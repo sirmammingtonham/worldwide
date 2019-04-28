@@ -65,7 +65,7 @@
                     <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
                     <li><a class="smoothscroll"  href="#about" title="about">The Modern Web</a></li>
                     <li><a class="smoothscroll"  href="#services" title="services">Code</a></li>
-                    <li><a class="smoothscroll"  href="#works" title="works">Modern Web Design</a></li>
+                    <li><a class="smoothscroll"  href="#works" title="works">Design</a></li>
                     <li><a class="smoothscroll"  href="#clients" title="clients">How Did We Get Here?</a></li>
                     <li><a href="../ruin/index.html" title="4headbruh">Enter the Ruin</a></li>
                     <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
@@ -319,7 +319,6 @@
                     <div class="btn btn--stroke" id="holyshitsomuchjavascript">
                         Experience Modern Web Design
                     </div>
-                    <h3 class="subhead"><a href="https://i.imgur.com/EoNd3ev.gifv" target="_blank">This button is gonna spam you with the annoying requests that so many websites have nowadays, like this linked animation</a></h3>
                 </div>
             </div> <!-- end section-header -->
 
@@ -823,9 +822,6 @@
     <script src="js/jquery-3.2.1.min.js" type="91707114f47386b64d0ec3ea-text/javascript"></script>
     <script src="js/plugins.js" type="91707114f47386b64d0ec3ea-text/javascript"></script>
     <script src="js/main.js" type="91707114f47386b64d0ec3ea-text/javascript"></script>
-    <!-- <script src="js/push.js" type="text/javascript"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.5/push.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js"></script> -->
 
 
     <!-- cookies!
@@ -854,13 +850,12 @@
     </script>
 
     <!-- push notifications... -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.5/push.js"></script>
     <script>
         button.addEventListener("click", function(event) {
-            Push.Permission.request(function(){}, function(){});
             Push.create("Do you like notifications?", {
                 body: "Well, too bad!",
-                icon: '../images/notification.png',
-                timeout: 4000,
+                icon: 'images/notification.png',
                 onClick: function () {
                     window.focus();
                     this.close();
@@ -874,35 +869,27 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.14.0/tingle.js"></script>
     <script>
         var ads = false;
-        var modalAdBlock;
-        function detected() {
-            ads = true;
-            modalAdBlock = new tingle.modal({
+        var modalAdBlock = new tingle.modal({
                 closeMethods: [],
                 footer: true,
                 stickyFooter: true,
-                // cssClass: ['main']
             });
-            // button.addEventListener('click', function(){
-            //     var bruh = document.getElementById("__talkjs_launcher");
-            //     bruh.addEventListener('click', function() {
-            //         modalAdBlock.open();
-            //     });
-            // });
-            modalAdBlock.setContent("<h1 style=\"text-align:center;\">AdBlock Detected!<br>Please consider disabling adblock or whitelisting this site.</h1><h3>We depend on ad revenue to...<br>blah blah blah</h3>");
+        modalAdBlock.setContent("<h1 style=\"text-align:center;\">AdBlock Detected!<br>Please consider disabling adblock or whitelisting this site.</h1><h3>We depend on ad revenue to...<br>blah blah blah</h3>");
 
-            modalAdBlock.addFooterBtn('Yes, I will turn off adblock', 'btn btn--stroke', function(){
-                alert("Thanks!");
-                modalAdBlock.close();
-            });
+        modalAdBlock.addFooterBtn('Yes, I will turn off adblock', 'btn btn--stroke', function(){
+            alert("Thanks!");
+            modalAdBlock.close();
+        });
 
-            modalAdBlock.addFooterBtn('Bruh i\'ll just leave the site lol', 'btn btn--stroke', function(){
-                alert("Right answer, ads are the worst right? I\'m just out here tryna consume some digital content without all these annoying mf ads.");
-                modalAdBlock.close();
-            });
+        modalAdBlock.addFooterBtn('Bruh i\'ll just leave the site lol', 'btn btn--stroke', function(){
+            alert("Right answer, ads are the worst right? I\'m just out here tryna consume some digital content without all these annoying mf ads.");
+            modalAdBlock.close();
+        });
+        function detected() {
+            ads = true;
         }
         function youGood() {
-            console.log("its 2019 and this mans doesnt use adblock...")
+            ads = false;
         }
 
         // We look at whether FuckAdBlock already exists.
@@ -973,6 +960,10 @@
                 var bruh = document.getElementById("__talkjs_launcher");
                 bruh.addEventListener('click', function() {
                     if (ads) {
+                        modalAdBlock.open();
+                    }
+                    else {
+                        alert("Whoa, it\'s 2019 and you don\'t use an adblock? Brave. Well, you\'re about to experience what happens if you did use an adblocker lol");
                         modalAdBlock.open();
                     }
                 });
