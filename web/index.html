@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 
     <!-- script
@@ -75,19 +76,22 @@
     
                 <ul class="header-nav__social">
                     <li>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-behance"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Myspace" target="_blank"><i class="fas fa-user-friends"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="https://neocities.org/" target="_blank"><i class="fas fa-city"></i></a>
+                    </li>
+                    <li>
+                        <a href="../ruin/index.html"><i class="fas fa-gopuram"></i></a>
                     </li>
                 </ul>
 
@@ -147,19 +151,22 @@
 
         <ul class="home-social">
             <li>
-                <a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+                <a href="https://en.wikipedia.org/wiki/Facebook" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
             </li>
             <li>
-                <a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+                <a href="https://en.wikipedia.org/wiki/Twitter" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
             </li>
             <li>
-                <a href="#0"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+                <a href="https://en.wikipedia.org/wiki/Instagram" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
             </li>
             <li>
-                <a href="#0"><i class="fa fa-behance" aria-hidden="true"></i><span>Behance</span></a>
+                <a href="https://en.wikipedia.org/wiki/Myspace" target="_blank"><i class="fas fa-user-friends" aria-hidden="true"></i><span>MySpace</span></a>
             </li>
             <li>
-                <a href="#0"><i class="fa fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a>
+                <a href="https://neocities.org/" target="_blank"><i class="fas fa-city" aria-hidden="true"></i><span>GeoCities</span></a>
+            </li>
+            <li>
+                <a href="../ruin/index.html"><i class="fas fa-gopuram" aria-hidden="true"></i><span>WorldWideRuin</span></a>
             </li>
         </ul> 
         <!-- end home-social -->
@@ -629,7 +636,7 @@
                 <p>Quia quo qui sed odit. Quaerat voluptas autem necessitatibus vitae aut non alias sed quia. Ut itaque enim optio ut excepturi deserunt iusto porro.</p>
 
                 <div class="subscribe-form">
-                    <form id="mc-form" class="group" novalidate="true">
+                    <form id="mc-form" class="group" action="email_form.php" method="post" novalidate="true">
                         <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
                         <input type="submit" name="subscribe" value="Subscribe">
                         <label for="mc-email" class="subscribe-message"></label>
@@ -885,6 +892,7 @@
         });
         modalNews.setContent("<div class=\"footer-subscribe\"><h1 align=\"center\" style=\"font-size: 48pt\">Stay Notified!&nbsp&nbsp</h1><h3 align=\"center\">Subscribe to our newsletter and be annoyed by constant email spam!</h3>" + document.querySelector('.subscribe-form').outerHTML);
     </script>
+
 <script src="js/rocket-loader.min.js" data-cf-settings="91707114f47386b64d0ec3ea-|49" defer=""></script>
 </body>
 
