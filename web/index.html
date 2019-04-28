@@ -872,6 +872,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.14.0/tingle.js"></script>
     <script>
         var ads = false;
+        var check = false;
         var modalAdBlock = new tingle.modal({
                 closeMethods: [],
                 footer: true,
@@ -892,7 +893,7 @@
             ads = true;
         }
         function youGood() {
-            ads = false;
+            check = true;
         }
 
         // We look at whether FuckAdBlock already exists.
@@ -965,9 +966,9 @@
                     if (ads) {
                         modalAdBlock.open();
                     }
-                    else {
+                    else if (check) {
                         var a = true; //for some reason if i dont include this the alert disappears in a second
-                        alert("Whoa, it\'s 2019 and you don\'t use an adblock? Brave. Well, you\'re about to experience what happens if you did use an adblocker lol");
+                        alert("Whoa, it\'s 2019 and you don\'t use an adblocker? Brave. Well, you\'re about to experience what happens if you did use an adblocker lol");
                         modalAdBlock.open();
                     }
                 });
