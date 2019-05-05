@@ -4,7 +4,7 @@
     <!-- Badda Bing, Badda Boom -->
     
     
-<!-- Mirrored from melonking.net/universe/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2019 04:10:24 GMT -->
+<!-- Mirrored from melonking.net/theruin/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2019 04:10:24 GMT -->
 <head>
         <meta charset="UTF-8">
         <title>THE RUIN</title>
@@ -14,7 +14,7 @@
             
         body {
             background-color: black;
-            background-image: url("space_bg.gif");
+            background-image: url("test.jpg");
             
             text-align: center;
             color: white;
@@ -40,19 +40,21 @@
         #logo, #wrapper {
             position: absolute;
             top:0;
-            bottom: 0;
+            bottom:0;
             left: 0;
             right: 0;
             margin: auto;
         }
         
         #logo {
-            width: 350px;
+            position: relative;
+            width: 650px;
+            bottom:-50;
         }
         
         .floater {
             position: absolute;
-            color: orange;
+            color: yellow;
         }
         
         .floater img {
@@ -60,13 +62,13 @@
             display: block;
         }
         
-        #bee {
+        #links {
             float: left;
-            bottom: 100px;
-            left: 90px;
+            left: 0px;
+            top: 350px;
         }
         
-        #bee img {
+        #links img {
             width: 50px;
         }
         
@@ -89,35 +91,11 @@
         #code {
             float: right;
             bottom: 140px;
-            right: -80px;
+            right: -150px;
         }
         
         #code img {
             width: 140px;
-        }
-        
-        #hacker {
-            float: right;
-            bottom: 0px;
-            right: 30px;
-        }
-        
-        #hacker img {
-            width: 278px;
-        }
-        
-        #star1 {
-            position: absolute;
-            float: left;
-            bottom: -70px;
-            left: -200px;
-        }
-        
-        #star2 {
-            position: absolute;
-            float: right;
-            bottom: 50px;
-            right: -250px;
         }
         
         #adventure {
@@ -133,7 +111,33 @@
         #meme {
             float: left;
             bottom: 50px;
-            left: -100px;
+            left: -120px;
+        }
+        #meme img {
+            position: relative;
+            left: 25px;
+        }
+
+        #mobile {
+            float: left;
+            top: 120px;
+            left: 50px;
+        }
+        #mobile img {
+            position: relative;
+            width: 50px;
+            left: 25px;
+        }
+
+        #placeholder {
+            float: right;
+            top: 200px;
+            right: 35px;
+        }
+        #placeholder img {
+            position: relative;            
+            width: 50px;
+            left: 15px;
         }
             
         </style>
@@ -143,34 +147,29 @@
         <div class="tossing" id="wrapper">
             
             <marquee behavior="scroll" direction="left" scrollamount="20">
-                The universe is yours, eat it! <font color="white">!!! Warning STARS !!!</font>
+                <b>YOU HAVE ENTERED THE RUIN! </b><font color="white">!!! Warning DUST !!!</font>
             </marquee>
 
             <p><img src="constr.gif"></p>
             
-            <img class="tossing" id="logo" src="sunart.png" />
+            <img class="tossing" id="logo" src="ruin.png" />
             
-            <a class="floater" id="bee" href="http://notsoelitehaxor.blogspot.com" target="_top" ><img class="twist" src="../images/gem.gif" align="middle"/>my old site</a>
+            <a class="floater" id="links" href="../links.html" target="main" ><img class="twist" src="../images/at.gif"/>Links</a>
             <a class="floater" id="blog" href="../blog.html" target="main" ><img class="twist" src="../images/blog.gif" />Ruin Blog!</a>
             <a class="floater" id="archive" href="https://archive.org/web/" target="_blank" ><img class="twist" src="art.png" />The Internet Archives</a>
-            <a class="floater" id="code" href="../code.html" target="main" ><img class="twist" src="https://media.giphy.com/media/3BQpe8StvUU4o/giphy.gif" />Code and stuff</a>
-            <a class="floater" id="hacker" href="../hacker.html" target="main" ><img src="../images/getahackername.gif" /></a>
-            <a class="floater" id="adventure" href="https://www.denofgeek.com/us/culture/internet-culture/269293/19-things-we-miss-about-the-early-days-of-the-web" target="_blank" ><img class="twist" src="omey/animated-island-image-0001.gif" />Adventure (placeholder)</a>
+            <a class="floater" id="code" href="../code.html" target="_top" ><img class="twist" src="https://media.giphy.com/media/3BQpe8StvUU4o/giphy.gif" />Code and stuff</a>
+            <a class="floater" id="adventure" href="https://www.denofgeek.com/us/culture/internet-culture/269293/19-things-we-miss-about-the-early-days-of-the-web" target="_blank" ><img class="twist" src="omey/animated-island-image-0001.gif" />(placeholder)</a>
             <a class="floater" id="meme" href="../meme.html" target="main"><img class="twist" src="../images/cringe/lolhowoldisthis.gif"/>EPIC MEMES & GIFS</a>
-            
-            
-            <img id="star1" src="shootingstar.gif">
-            <img id="star2" src="shootingstar.gif">
+            <a class="floater" id="mobile" href="../mobileweb.html" target="main" ><img class="twist" src="../images/phone.png"/>The Mobile Web</a>
+            <a class="floater" id="placeholder" href="../idk.html" target="main" ><img class="twist" src="jartguy1.gif"/>(placeholder)</a>
             
         </div>
         
-        <img src="shootingstar.gif">
-        
         <audio autoplay loop>
-            <source src="../audio/repost.mp3" type="audio/mpeg">
+            <source src="../audio/yungkira.mp3" type="audio/mpeg">
         </audio>
         
     </body>
 
-<!-- Mirrored from melonking.net/universe/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2019 04:10:43 GMT -->
+<!-- Mirrored from melonking.net/theruin/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2019 04:10:43 GMT -->
 </html>
