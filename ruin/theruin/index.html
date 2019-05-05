@@ -14,12 +14,17 @@
             
         body {
             background-color: black;
-            background-image: url("bg1.gif");
-            background-size: 1400px 900px;
-            background-repeat: no-repeat;
-            
             text-align: center;
             color: white;
+        }
+        #background {
+            background-image: url("b.gif");
+            background-size: auto 161px;
+            opacity: 0.6;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
         
         marquee {
@@ -56,7 +61,7 @@
         
         .floater {
             position: absolute;
-            color: orange;
+            color: yellow;
         }
         
         .floater img {
@@ -145,7 +150,7 @@
         </style>
     </head>
     <body>
-        
+        <div id="background"></div>
         <div class="tossing" id="wrapper">
             
             <marquee behavior="scroll" direction="left" scrollamount="20">
