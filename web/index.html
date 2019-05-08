@@ -883,6 +883,7 @@
         function getLocation() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(){
+                    var b = true;
                     alert("Thank you for sharing your location. We will use this information to improve the relevancy of the ads we show.")
                 });
             }
