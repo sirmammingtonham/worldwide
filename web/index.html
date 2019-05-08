@@ -834,6 +834,7 @@
 
     <!-- TalkJS-->
     <script>
+        var locationPopup = false;
         function letsTalk() {
             Talk.ready.then(function() {
                 var me = new Talk.User({
@@ -863,6 +864,7 @@
                 });
                 popup.mount({ show: false });
                 popup.show();
+                locationPopup = true;
                 var bruh = document.getElementById("__talkjs_launcher");
                 bruh.addEventListener('click', function() {
                     if (ads) {
@@ -883,8 +885,9 @@
         function getLocation() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(){
-                    var b = true;
-                    alert("Thank you for sharing your location. We will use this information to improve the relevancy of the ads we show.")
+                    if (locationPopup) {
+                    alert("Thank you for sharing your location. We will use this information to improve the relevancy of the ads we show.");
+                    }
                 });
             }
         }
