@@ -763,7 +763,6 @@
                 body: "Well, too bad!",
                 icon: 'images/notification.png',
                 onClick: function () {
-                    window.focus();
                     this.close();
                 }
             })
@@ -883,7 +882,9 @@
     <script type="text/javascript">
         function getLocation() {
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(){});
+                navigator.geolocation.getCurrentPosition(function(){
+                    alert("Thank you for sharing your location. We will use this information to improve the relevancy of the ads we show.")
+                });
             }
         }
     </script>
@@ -893,7 +894,10 @@
         var modalNews = new tingle.modal({
             closeMethods: ['overlay', 'button', 'escape'],
             footer: false,
-            onClose: getLocation,
+            onClose: function() {
+                letsTalk();
+                getLocation();
+            },
             // cssClass: ['main']
         });
         button.addEventListener('click', function(){
