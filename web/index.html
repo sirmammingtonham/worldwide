@@ -879,12 +879,21 @@
         }
     </script>
 
+    <!-- Location -->
+    <script type="text/javascript">
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(){});
+            }
+        }
+    </script>
+
     <!-- newsletter -->
     <script type="text/javascript">
         var modalNews = new tingle.modal({
             closeMethods: ['overlay', 'button', 'escape'],
             footer: false,
-            onClose: letsTalk,
+            onClose: getLocation,
             // cssClass: ['main']
         });
         button.addEventListener('click', function(){
