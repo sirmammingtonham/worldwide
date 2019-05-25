@@ -2599,6 +2599,16 @@ html.no-csstransitions .home-content__main {
     transition: all 0.3s ease-in-out;
 }
 
+.item-image__caption {
+    font-family: "montserrat-semibold", sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.286;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin: 0 0 .3rem 0;
+}
+
 .item-folio__title {
     font-family: "montserrat-semibold", sans-serif;
     font-size: 1.4rem;
